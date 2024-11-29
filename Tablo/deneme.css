@@ -5,31 +5,24 @@ body {
     align-items: center;
     margin: 0;
     height: 100%;
-    background-color: #f0f0f0;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    width: 1870px;
+    padding: 50px;
     
 }
+.dynamic-title {
+    display: inline-block; /* Genişliği belirlemek için inline-block */
+    color: red;
+    padding: 5px 10px;
+    text-align: center;
+    width: calc(787% / 9); /* Tablo hücrelerinin genişliği kadar ol */
+    box-sizing: border-box;
+    font-size: 180%;
+  }
 
-.card-header {
-    background-color: #dc3545;
-    color: white;
-    font-weight: bold;
-    border: 1px solid #333;
-    border-radius: 10px;
-    margin-bottom: 0;
-    width: 1774px;
-}
 
 /* Tablo düzenlemeleri */
 .table-container {
@@ -38,28 +31,13 @@ body {
     width: 150%;
     margin: 0 auto;
     align-items: center;
-    
-    
 }
 
 table {
     border-collapse: collapse;
-    width: 10rem;
+    width: 7rem;
     border: 1px solid #000;
     height: 368px; /* İçeriğe göre otomatik olarak boyutlanır */
-
-    
-    
-}
-.visa-table{
-    margin-bottom: 0; /* Üst boşluk */
-    max-width: 90%; /* Tabloyu genişliğini %90 olarak sınırlar */
-    height: 370px; /* İçeriğe göre otomatik olarak boyutlanır */
-    
-}
-.visa-table th, .visa-table td {
-    text-align: center; /* Hücre içeriğini ortalar */
-
 }
 
 td {
@@ -75,22 +53,30 @@ td.cell {
 .cell-content {
     display: flex;
     align-items: center;
-    gap: 4rem;
     white-space: nowrap;
+    height: 40px;
+    width: auto;
+    justify-content: flex-end; /* Sağ tarafa yasla */
+}
+.cell {
+    padding: 10px;
 }
 
+
 .cell-content input[type="radio"] {
-    margin-right: 5px;
-    transform: scale(1.5);
-    margin: 0;
+    transform: scale(1.3);
+    
+}
+input[type="radio"]{
+    margin-right: auto;
 }
 
 .text {
     display: flex;
     flex-direction: column;
     gap: 0px;
-    margin-left: auto;
-    text-align: right;
+    margin-left: 10px;
+    text-align: right; /* Sağ hizalama */
 }
 
 .text2 {
@@ -103,19 +89,25 @@ td.cell {
 
 .text-top,
 .text-bottom {
-    display: inline-block;
+    display: block;
     white-space: nowrap;
+
 }
 
 .text-top, .text-bottom {
     margin-left: auto;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .yazi {
     text-align: right;
-    font-size: 20px;
+    font-size: 15px;
 }
+
+.TekcekimBaslik{
+    height: 57px;
+}
+
 
 
 
@@ -130,64 +122,23 @@ td.cell {
 .ziraat { background-color: #ef5d8d !important; }
 .vakif { background-color: #f6d7bc !important; }
 .qnb { background-color: #a8d7f0 !important; }
-.visa { background-color: #eae7e1 !important; height: 82px; }
+.visa { background-color: #eae7e1 !important; padding-top: 10px; }
 .Yellow { background-color: #ffc107; }
 
 .gizle { opacity: 0; border: none; }
 
-/* Medya Sorguları (Responsive) */
-@media (max-width: 1864px) {
-    .card-header { width: 1795px; }
-}
-@media (max-width: 1835px) {
-    .card-header { width: 1597px; }
-}
-@media (max-width: 1637px) {
-    .card-header { width: 1419px; }
-}
-
-
-@media (max-width: 1459px) {
-    .card-header { width: 1242px; }
-
-}
-
-@media (max-width: 1282px) {
-    .card-header { width: 1064px; }
-
-    
-}
-
-@media (max-width: 1104px) {
-    .card-header { width: 887px; }
-}
-@media (max-width: 927px) {
-    .card-header { width: 710px; }
-}
-
 @media (max-width: 790px) {
     
     table {
-        height: auto;
         width: auto;
         max-width: 100%;
     }
-    .card-header { 
-        width: 603px; 
-        margin-top: 20px; /* Yukarı kaymayı önlemek için margin ekledik */
-    }
 }
-@media (max-width: 659px) {
+@media (max-width: 790px) {
     
-    .table-container {
-        align-items: center;
-    }
-    table { 
-        max-width: 100%; 
-    }
-    .card-header { 
-        width: 402px; 
-        margin-top: 20px; /* Yukarı kaymayı önlemek için margin ekledik */
+    .dynamic-title {
+        
+        font-size: 150%;
     }
 }
 
@@ -211,6 +162,12 @@ td.cell {
         font-size: 1rem; 
         margin-top: 10px; /* Yukarı kaymayı önlemek için margin ekledik */
         text-align: center;
+    }
+    .dynamic-title {
+        
+        font-size: 120%;
+        margin-left: 25px;
+        border-radius: 10px solid #000 ;
     }
 }
 
