@@ -1,0 +1,249 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .card-header {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+  }
+  
+  table {
+    table-layout: auto;
+  }
+  
+  table th {
+    font-size: 1rem;
+    vertical-align: middle;
+  }
+  
+  table td {
+    vertical-align: middle;
+    position: relative;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .radio-container input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .radio-container label {
+    margin-left: auto;
+  }
+  
+  /* Button */
+  .btn-danger {
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-danger:hover {
+    background-color: #b32432;
+    transform: scale(1.05);
+  }
+  
+  .table-bordered {
+    border: 2px solid #dee2e6;
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+  }
+  
+  /* Banka Sütunları İçin Özel Renkler */
+  .tek-cekim {
+    background-color: #d5cec3 !important;
+  }
+  
+  .bonus {
+    background-color: #e6ffe8 !important;
+  }
+  
+  .axess {
+    background-color: #fff9e6 !important;
+  }
+  
+  .paraf {
+    background-color: #fce8f2 !important;
+  }
+  
+  .maximum {
+    background-color: #f08fbf !important;
+  }
+  
+  .world {
+    background-color: #e7d3f8 !important;
+  }
+  
+  .ziraat {
+    background-color: #ef5d8d !important;
+  }
+  
+  .vakif {
+    background-color: #f6d7bc !important;
+  }
+  
+  .qnb {
+    background-color: #a8d7f0 !important;
+  }
+  
+  .visa {
+    background-color: #eae7e1 !important;
+  }
+  
+  /* 5. Satır için Özel Renk (Sarı) */
+  .highlight-row {
+    background-color: #ffc107; /* Sarı */
+  }
+  
+  .highlight-row td:first-child {
+    background-color: #ffffff; /* 1. sütun beyaz */
+  }
+  
+  /* Küçük ekranlar için responsive tasarım */
+  @media (max-width: 1209px) {
+    /* Yazı tiplerini küçültme */
+    .bonus, .axess, .paraf, .maximum, .world, .ziraat, .vakif, .qnb {
+      flex: 0 0 20%; /* 5'li düzen */
+      max-width: 20%;
+    }
+
+    .card-header h5 {
+      font-size: 1.25rem;
+    }
+  
+    table th, table td {
+      font-size: 0.8rem;
+    }
+  
+    .btn-danger {
+      font-size: 1rem;
+    }
+  
+    /* Tablo hücrelerine padding ayarlaması */
+    .table th, .table td {
+      padding: 0.5rem;
+    }
+  
+    /* Radio butonları için düzen */
+    .radio-container {
+      flex-wrap: nowrap;
+      /* flex-direction: column; */
+      align-items: flex-start;
+    }
+  
+    /* Buton boyutlarını küçük ekranlar için ayarlama */
+    .btn-danger {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    .radio-container label {
+        margin-left: auto;
+        display: inline-block;
+    }
+    .radio-container input[type="radio"] {
+        margin-right: 10px;
+        
+      }
+  }
+  
+  @media (max-width: 991px) {
+     
+   .card-header h5 {
+      font-size: 1.25rem;
+    }
+  
+    table th, table td {
+      font-size: 0.5rem;
+    }
+  
+    .btn-danger {
+      font-size: 1rem;
+    } 
+  
+    /* Radio butonları için düzen */
+     .radio-container {
+      flex-wrap: nowrap;
+       flex-direction: column; 
+       align-items: flex-start;
+    }  
+   
+    /* Buton boyutlarını küçük ekranlar için ayarlama */
+    .btn-danger {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    .radio-container label {
+        margin-left: auto;
+        display: inline-block;
+    }
+    .radio-container input[type="radio"] {
+        margin-right: 10px;
+        
+    } 
+  }
+  
+   
+   
+  @media (max-width: 768px) {
+    .table {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .table thead {
+      display: none; /* Tablo başlıklarını gizle */
+    }
+  
+    .table tbody {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .table .bonus,
+    .table .axess,
+    .table .paraf,
+    .table .maximum,
+    .table .world,
+    .table .ziraat,
+    .table .vakif,
+    .table .qnb,
+    .table .visa {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ddd; /* Bloklar arasında ayırıcı */
+      margin-bottom: 10px; /* Bloklar arasında boşluk */
+      padding: 10px;
+    }
+  
+    .table .radio-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px; /* Seçenekler arasında boşluk */
+    }
+  
+    .table .text-right {
+      text-align: right;
+    }
+  }
+  
+  
+    .text-right {
+      flex: 1;
+      text-align: right;
+    }
+  
+  
+  
+  

@@ -1,0 +1,219 @@
+/* Genel stil */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 1870px;
+    
+}
+
+.card-header {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-bottom: 0;
+    width: 1774px;
+}
+
+/* Tablo düzenlemeleri */
+.table-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150%;
+    margin: 0 auto;
+    align-items: center;
+    
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 10rem;
+    border: 1px solid #000;
+    height: 368px; /* İçeriğe göre otomatik olarak boyutlanır */
+
+    
+    
+}
+.visa-table{
+    margin-bottom: 0; /* Üst boşluk */
+    max-width: 90%; /* Tabloyu genişliğini %90 olarak sınırlar */
+    height: 370px; /* İçeriğe göre otomatik olarak boyutlanır */
+    
+}
+.visa-table th, .visa-table td {
+    text-align: center; /* Hücre içeriğini ortalar */
+
+}
+
+td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+td.cell {
+    width: 200px;
+}
+
+.cell-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    white-space: nowrap;
+}
+
+.cell-content input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.5);
+    margin: 0;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-left: auto;
+    text-align: right;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    margin-left: 35px;
+}
+
+.text-top,
+.text-bottom {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.text-top, .text-bottom {
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.yazi {
+    text-align: right;
+    font-size: 20px;
+}
+
+
+
+
+/* Background Color for Different Classes */
+.tek-cekim { background-color: #d5cec3 !important; }
+.bonus { background-color: #e6ffe8 !important; }
+.axess { background-color: #fff9e6 !important; }
+.paraf { background-color: #fce8f2 !important; }
+.maximum { background-color: #f08fbf !important; }
+.world { background-color: #e7d3f8 !important; }
+.ziraat { background-color: #ef5d8d !important; }
+.vakif { background-color: #f6d7bc !important; }
+.qnb { background-color: #a8d7f0 !important; }
+.visa { background-color: #eae7e1 !important; height: 82px; }
+.Yellow { background-color: #ffc107; }
+
+.gizle { opacity: 0; border: none; }
+
+/* Medya Sorguları (Responsive) */
+@media (max-width: 1864px) {
+    .card-header { width: 1795px; }
+}
+@media (max-width: 1835px) {
+    .card-header { width: 1597px; }
+}
+@media (max-width: 1637px) {
+    .card-header { width: 1419px; }
+}
+
+
+@media (max-width: 1459px) {
+    .card-header { width: 1242px; }
+
+}
+
+@media (max-width: 1282px) {
+    .card-header { width: 1064px; }
+
+    
+}
+
+@media (max-width: 1104px) {
+    .card-header { width: 887px; }
+}
+@media (max-width: 927px) {
+    .card-header { width: 710px; }
+}
+
+@media (max-width: 790px) {
+    
+    table {
+        height: auto;
+        width: auto;
+        max-width: 100%;
+    }
+    .card-header { 
+        width: 603px; 
+        margin-top: 20px; /* Yukarı kaymayı önlemek için margin ekledik */
+    }
+}
+@media (max-width: 659px) {
+    
+    .table-container {
+        align-items: center;
+    }
+    table { 
+        max-width: 100%; 
+    }
+    .card-header { 
+        width: 402px; 
+        margin-top: 20px; /* Yukarı kaymayı önlemek için margin ekledik */
+    }
+}
+
+@media (max-width: 480px) {
+    .table-container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%; /* Tablo konteynerinin genişliğini %90 yaparak daha küçük görünmesini sağlıyoruz */
+    }
+    table { 
+        max-width: 100%; 
+        font-size: 0.9rem;
+    }
+    table td, table th {
+        padding: 8px; /* Tablo hücrelerindeki boşlukları biraz küçültüyoruz */
+    }
+    .TekCekim-Table { 
+        display: none; 
+    }
+    .card-header h5 { 
+        font-size: 1rem; 
+        margin-top: 10px; /* Yukarı kaymayı önlemek için margin ekledik */
+        text-align: center;
+    }
+}
+
+
+
+
